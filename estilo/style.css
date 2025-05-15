@@ -79,15 +79,6 @@ main a:hover {
     color: var(--cor4);
 }
 
-main img {
-    width: 100%;
-}
-
-main img.pequena {
-    max-width: 350px; 
-    margin: auto;
-    display: block;
-}
 
 main h1 {
     color: rgb(156, 11, 11);
@@ -114,7 +105,17 @@ div.video {
     position: relative;
 }
 
+div.espaço {
+    margin-top: 30px;
+}
 
+div.espaçopequeno {
+    margin-top: 10px;
+}
+
+div.espaçogrande {
+    margin-top: 80px;
+}
 
 div.video > iframe {
     position: absolute;
