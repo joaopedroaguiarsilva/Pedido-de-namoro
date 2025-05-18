@@ -7,143 +7,134 @@
 }
 
 :root {
-    --cor0:#efdae5b4;
-    --cor1:#CC999F;
-    --cor2:#A0767B;
-    --cor3:#754349;
-    --cor4:#4B1E23;
-    --cor5:#ebc5c9;
-    
-
+    --cor0: #efdae5b4;
+    --cor1: #CC999F;
+    --cor2: #A0767B;
+    --cor3: #754349;
+    --cor4: #4B1E23;
+    --cor5: #ebc5c9;
     --fote-padrao: Arial, Verdana, Helvetica, sans-serif;
     --font-titulo: 'LEMONMILK', sans-serif;
 }
 
 * {
-    margin:0px;
-    padding:0px; 
- }
-
- body {
-    background-color: rgb(255, 221, 221);
- }
-
- header {
-    background-color: rgb(172, 62, 62);
-    min-height: 100px;
-    text-align: center;
-    padding-top: 40px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header > h1 {
-    color:black; 
-    margin-bottom: 20px;
-    font-size: 2.5em;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffdddd, #ffe6e6);
+    font-family: var(--fote-padrao);
+}
+
+header {
+    background: linear-gradient(to bottom, var(--cor2), var(--cor1));
+    min-height: 120px;
+    text-align: center;
+    padding-top: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: white;
+    font-family: var(--font-titulo);
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in;
 }
 
 main {
     background-color: white;
     min-width: 300px;
     max-width: 1100px;
-    margin:auto;
+    margin: auto;
     margin-bottom: 30px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.414);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.414);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-main p {
-    margin: 15px 0px;
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 2em;
-    font-size: 1em;
+.content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
 }
 
-main strong {
-    color: var(--cor4);
-    font-weight: bold;
-}
-
-main a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--cor5);
-    background-color: var(--cor1);
-    padding: 2px 6px;
-}
-
-main a:hover {
-    text-decoration: underline;
-    color: var(--cor4);
-}
-
-
-main h1 {
+.content h2 {
     color: rgb(156, 11, 11);
-    font-family: var(--font-android);
+    font-family: var(--font-titulo);
     font-weight: normal;
     font-size: 1.8em;
-    border: black;
+    margin-bottom: 20px;
 }
 
-main h2 {
-    font-family: var(--font-android);
+.content p {
+    margin: 15px 0;
+    font-size: 1.1em;
     color: var(--cor4);
-    font-size: 1.3em;
-    font-weight: normal;
-    background-image: linear-gradient(to right, var(--cor1), transparent);
-    text-indent: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-div.video {
-    background-color: var(--cor5);
-    margin: 0px -20px 30px -20px;
-    padding: 20px;
-    padding-bottom: 60%;
-    position: relative;
+.content img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
 }
 
-div.espaço {
-    margin-top: 30px;
-}
-
-div.espaçopequeno {
-    margin-top: 10px;
-}
-
-div.espaçogrande {
+.espaçogrande {
     margin-top: 80px;
 }
 
-div.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-}
-
-aside {
-    background-color: var(--cor1);
-    padding: 10px;
+.final {
+    background: linear-gradient(to bottom, var(--cor0), white);
+    padding: 40px 20px;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.282);
 }
 
-aside > h3 {
-    background-color: rgb(172, 62, 62);
+.final h1 {
+    color: var(--cor4);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+.botoes button {
+    background-color: var(--cor2);
     color: white;
-    margin: -10px -10px 0px -10px;
-    padding: 10px;
-    border-radius: 10px 10px 0px 0px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
 }
 
-aside > ul {
-    list-style-type: '\2714\00A0\00A0';
-    list-style-position: inside;
-    columns: 2;
+.botoes button.nao {
+    background-color: var(--cor3);
+}
+
+.botoes button:hover {
+    background-color: var(--cor1);
+}
+
+.botoes button.nao:hover {
+    background-color: var(--cor4);
 }
 
 footer {
@@ -157,10 +148,40 @@ footer {
 footer p {
     color: black;
     font-weight: bolder;
-    text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: var(--cor1);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        min-height: 100px;
+        padding-top: 30px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .content h2 {
+        font-size: 1.5em;
+    }
+    .content p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+    .botoes button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .final h1 {
+        font-size: 2em;
+    }
 }
